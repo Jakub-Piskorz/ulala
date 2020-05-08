@@ -1,0 +1,128 @@
+@font-face {
+    font-family: 'Spartan Black';
+    src: url('fonts/SpartanMB-Black.otf');
+}
+@font-face {
+    font-family: 'Spartan Bold';
+    src: url('fonts/SpartanMB-Bold.otf');
+}
+@font-face {
+    font-family: 'Spartan Extra Bold';
+    src: url('fonts/SpartanMB-Extra-Bold.otf');
+}
+@font-face {
+    font-family: 'Spartan Light';
+    src: url('fonts/SpartanMB-Light.otf');
+}
+@font-face {
+    font-family: 'Spartan Regular';
+    src: url('fonts/SpartanMB-Regular.otf');
+}
+@font-face {
+    font-family: 'Spartan SemiBold';
+    src: url('fonts/SpartanMB-SemiBold.otf');
+}
+@font-face {
+    font-family: 'Spartan Thin';
+    src: url('fonts/SpartanMB-Thin.otf');
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Spartan Regular';
+    font-size: 12px;
+}
+header {
+    width: 100%;
+    box-shadow: 0 0px 12px rgba(0,0,0,0.05);
+    z-index: 5;
+    position: relative;
+}
+#header-container {
+    display: flex;
+    height: 120px;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: 'Spartan Bold';
+    font-size: 14px;
+    letter-spacing: 1px;
+    max-width: 1140px;
+    margin: auto;
+}
+.logo-container {
+    height: 100%;
+    width: 200px;
+    padding: auto;
+}
+.logo {
+    width: auto;
+    height: auto;
+    max-height: 100%;
+    max-width: 90px;
+    margin: 15px 55px;
+}
+nav {
+    width: 600px;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    display: flex;
+    height: 100%;
+}
+.slider {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    background-color: #f1f1f1;
+}
+
+.section.one {
+    display: flex;
+    width: 100%;
+    height: 800px;
+    align-items: center;
+    justify-content: space-evenly;
+    background: url('img/dziecko-tort.jpg') no-repeat center lightgray;
+    background-size: 1920px;
+    letter-spacing: 0.5em;
+    padding: 0 5%;
+}
+.one h1 {
+    font-size: 55px;
+    margin: 0;
+}
+.one h2 {
+    font-size: 30px;
+    font-family: 'Spartan light';
+    line-height: 50px;
+}
+.one h3 {
+    font-size: 18px;
+    font-family: 'Spartan bold';
+    letter-spacing: 0.2em;
+}
+.one div {
+    width: 60%;
+}
+.one .red-button {
+    background-color: rgb(218, 13, 13);
+    display: inline-block;
+    width: auto;
+    padding: 23px 30px;
+    border-radius: 15px;
+    color: white;
+    transition-duration: 0.2s;
+    font-size: 12px;
+    letter-spacing: 0.2em;
+    margin: 12px 0 20px;
+    font-family: "Spartan black";
+    mar
+}
+.one .red-button:hover {
+    background-color: rgb(235, 85, 85);
+}
