@@ -75,6 +75,34 @@ nav {
     display: flex;
     height: 100%;
 }
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    outline: none;
+}
+
+nav a::after {
+    content: "";
+    left: 50%;
+    right: 50%;
+    width: 0;
+    transition: 0.4s;
+    border: solid black;
+    border-bottom: 2px;
+    border-left: 0;
+    border-right: 0;
+    bottom: -10px;
+    position: absolute;
+}
+
+nav a:hover::after, nav a:focus::after {
+    left: 25%;
+    right: 25%;
+    width: 50%;
+}
 .slider {
     display: flex;
     width: 100%;
@@ -82,8 +110,9 @@ nav {
     background-color: #f1f1f1;
 }
 
-.section.one {
+.section-one {
     position: relative;
+    overflow: hidden;
     display: flex;
     width: 100%;
     height: 800px;
@@ -94,7 +123,7 @@ nav {
     padding: 0 5%;
     color: #222222;
 }
-.one .bg {
+.section-one .bg {
     overflow: hidden;
     z-index: -1;
     height: auto;
@@ -102,24 +131,27 @@ nav {
     min-width: 1920px;
     position: absolute;
 }
-.one h1 {
+.section-one #text {
+    display: inline-block;
+}
+.section-one h1 {
     font-size: 55px;
     margin: 0;
 }
-.one h2 {
+.section-one h2 {
     font-size: 30px;
     font-family: 'Spartan light';
     line-height: 50px;
 }
-.one h3 {
+.section-one h3 {
     font-size: 18px;
     font-family: 'Spartan bold';
     letter-spacing: 0.2em;
 }
-.one div {
+.section-one div {
     width: 60%;
 }
-.one .red-button {
+.section-one .red-button {
     background-color: rgb(218, 13, 13);
     display: inline-block;
     width: auto;
@@ -131,12 +163,13 @@ nav {
     letter-spacing: 0.2em;
     margin: 12px 0 20px;
     font-family: "Spartan black";
+    box-shadow: rgba(0,0,0,0.1) 3px 3px 6px;
 }
-.one .red-button:hover {
+.section-one .red-button:hover {
     background-color: rgb(235, 85, 85);
 }
 
-.section.two {
+.section-two {
     display: flex;
     position: relative;
     width: 100%;
@@ -144,47 +177,59 @@ nav {
     align-items: center;
     justify-content: flex-end;
     letter-spacing: 0.5em;
-    padding: 0 5%;
+    padding: 80px 5% 0;
     color: #222222;
     overflow: hidden;
 }
 
 #banner2 {
     display: flex;
-    width: 600px;
+    width: 100%;
+    max-width: 600px;
     margin-right: 8%;
     flex-direction: column;
     justify-content: flex-start;
     margin-bottom: 70px;
 }
 
-.two .box-container {
+.section-two .box-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
     width: 600px;
     height: 550px;
     grid-gap: 20px;
 }
-.two .small-box {
+.section-two .small-box {
     background-color: white;
-    width: 100%;
-    height: 100%;
-    place-self: start stretch;
     box-shadow: rgba(0,0,0,0.1) 3px 6px 6px;
     border-radius: 12px;
-    padding: 15px;
+    padding: 20px;
     font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-weight: 900;
 }
-.two h2 {
+
+.section-two .small-box img {
+    width: 120px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.section-two h2 {
     font-size: 55px;
     margin-bottom: 50px;
 }
-.two p {
+.section-two p {
     letter-spacing: 0.4px;
     margin: 0;
 }
 
-.two .bg {
+.section-two .bg {
     overflow: hidden;
     z-index: -1;
     height: 100%;
@@ -199,7 +244,31 @@ nav {
 
 
 @media screen and (max-width: 1200px) {
-    .one div {
+    .section-one div {
         width: 80%;
+    }
+    .section-two {
+        height: auto;
+    }
+    h1, h2, h3, p, .red-button, #text {
+        text-align: center;
+    }
+    #banner2 {
+        margin-right: 0;
+    }
+    .section-two .box-container {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        width: 100%;
+        height: 1000px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .section-two .bg {
+        height: 100%;
+    }
+    .red-button {
+        margin-left: auto;
+        margin-right: auto;
     }
 }
