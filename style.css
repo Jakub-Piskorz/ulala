@@ -78,7 +78,7 @@ header {
   margin: 15px 55px;
 }
 
-nav {
+.nav {
   width: 600px;
   align-items: center;
   flex-direction: row;
@@ -88,7 +88,7 @@ nav {
   height: 100%;
 }
 
-nav a {
+.nav__item {
   position: relative;
   text-decoration: none;
   cursor: pointer;
@@ -96,7 +96,7 @@ nav a {
   outline: none;
 }
 
-nav a::after {
+.nav__item::after {
   content: "";
   left: 50%;
   right: 50%;
@@ -110,8 +110,7 @@ nav a::after {
   position: absolute;
 }
 
-nav a:hover::after,
-nav a:focus::after {
+.nav__item:hover::after, .nav__item:focus::after {
   left: 25%;
   right: 25%;
   width: 50%;
@@ -261,7 +260,7 @@ nav a:focus::after {
   }
 }
 
-.section-two .small-box {
+.section-two .box-container__box {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.1) 3px 6px 6px;
   border-radius: 12px;
@@ -275,7 +274,7 @@ nav a:focus::after {
   font-weight: 900;
 }
 
-.section-two img {
+.section-two .box-container__img {
   width: 120px;
   height: auto;
   margin-bottom: 10px;

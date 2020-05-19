@@ -66,7 +66,7 @@ header {
   max-width: 90px;
   margin: 15px 55px;
 }
-nav {
+.nav {
   width: 600px;
   align-items: center;
   flex-direction: row;
@@ -74,35 +74,33 @@ nav {
   justify-content: space-evenly;
   display: flex;
   height: 100%;
-}
+  &__item {
+    position: relative;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+    outline: none;
+  }
+  &__item::after {
+    content: "";
+    left: 50%;
+    right: 50%;
+    width: 0;
+    transition: 0.4s;
+    border: solid black;
+    border-bottom: 2px;
+    border-left: 0;
+    border-right: 0;
+    bottom: -10px;
+    position: absolute;
+  }
 
-nav a {
-  position: relative;
-  text-decoration: none;
-  cursor: pointer;
-  color: black;
-  outline: none;
-}
-
-nav a::after {
-  content: "";
-  left: 50%;
-  right: 50%;
-  width: 0;
-  transition: 0.4s;
-  border: solid black;
-  border-bottom: 2px;
-  border-left: 0;
-  border-right: 0;
-  bottom: -10px;
-  position: absolute;
-}
-
-nav a:hover::after,
-nav a:focus::after {
-  left: 25%;
-  right: 25%;
-  width: 50%;
+  &__item:hover::after,
+  &__item:focus::after {
+    left: 25%;
+    right: 25%;
+    width: 50%;
+  }
 }
 .slider {
   display: flex;
@@ -221,25 +219,24 @@ nav a:focus::after {
       margin-left: auto;
       margin-right: auto;
     }
-  }
-  .small-box {
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.1) 3px 6px 6px;
-    border-radius: 12px;
-    padding: 20px;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-weight: 900;
-  }
-
-  img {
-    width: 120px;
-    height: auto;
-    margin-bottom: 10px;
+    &__box {
+      background-color: white;
+      box-shadow: rgba(0, 0, 0, 0.1) 3px 6px 6px;
+      border-radius: 12px;
+      padding: 20px;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+    &__img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 10px;
+    }
   }
 
   h2 {
