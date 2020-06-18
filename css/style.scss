@@ -186,6 +186,10 @@ h3 {
   font-family: "Spartan black";
   box-shadow: rgba(0, 0, 0, 0.1) 3px 3px 6px;
   text-decoration: none;
+  a {
+    text-decoration: inherit;
+    color: inherit;
+  }
   @media screen and (max-width: 1200px) {
     text-align: center;
     margin-left: auto;
